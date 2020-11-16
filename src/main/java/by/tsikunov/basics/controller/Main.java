@@ -1,21 +1,16 @@
 package by.tsikunov.basics.controller;
 
 import by.tsikunov.basics.model.Branching;
-import by.tsikunov.basics.model.Cycle;
+import by.tsikunov.basics.model.Loop;
 import by.tsikunov.basics.model.Linear;
 
 public class Main {
     public static void main(String[] args) {
         Linear linearOperation = new Linear();
         Branching branchingOperation = new Branching();
-        Cycle cycleOperation = new Cycle();
+        Loop loopOperation = new Loop();
 
-        System.out.println(cycleOperation.fifthTask());
+        System.out.println(loopOperation.eighthTask());
 
-        Integer x = new Integer(22);
-        cycleOperation.sixthTask();
-        if(null instanceof Integer) {
-            System.out.println(true);
-        } ;
     }
 }
