@@ -10,7 +10,11 @@ public class Main {
         Branching branchingOperation = new Branching();
         Loop loopOperation = new Loop();
 
-        System.out.println(loopOperation.eighthTask());
+        //System.out.println(loopOperation.eighthTask());
+
+        int [][]mass = new int[20][10];
+        System.out.println(mass.length);
+        System.out.println(mass[1].length);
 
     }
 }

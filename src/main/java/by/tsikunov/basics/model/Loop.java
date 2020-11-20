@@ -101,7 +101,6 @@ public class Loop {
         int m = scanner.nextInt();
         int n = scanner.nextInt();
         StringBuilder result = new StringBuilder();
-
         for (int i = m; i <= n; i++) {
             result.append(i).append(": ");
             for(int j = 2; j < i; j++) {
@@ -140,22 +139,18 @@ public class Loop {
         if(!isDigitInNumber(0, result) && isZero) {
             result *= 10;
         }
-
-
         return result;
     }
     /*
     Проверка на вхождение цифры в число
     */
     private boolean isDigitInNumber(int digit, int number) {
-
         do {
             if(number % 10 == digit) {
                 return true;
             }
             number /= 10;
         } while (number != 0);
-
         return false;
     }
 }
