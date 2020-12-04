@@ -3,13 +3,12 @@ package by.tsikunov.basics.model;
 import java.util.Scanner;
 
 public class Loop {
+
     /*
-    Напишите программу, где пользователь вводит любое целоеположительноечисло.
+    First Task. Напишите программу, где пользователь вводит любое целое положительноечисло.
     А программа суммирует все числа от 1 до введенного пользователем числа.
     */
-    public int firstTask() {
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
+    public int firstTask(int number) {
         int result = 0;
         for (int i = 0; i <= number; i++) {
             result += i;
@@ -18,24 +17,20 @@ public class Loop {
     }
 
     /*
-    Вычислить значенияфункции на отрезке [а,b] c шагом h:
+    Second Task. Вычислить значения функции на отрезке [а,b] c шагом h:
                 y = { x, x > 2
-                     -x, x <= 2
+                    {-x, x <= 2
     */
-    public int secondTask() {
-        int result = 0;
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int h = scanner.nextInt();
+    public String secondTask(int a, int b, int h) {
+        StringBuilder result = new StringBuilder();
         for (int i = a; i <= b; i += h) {
-            result += i <= 2 ? -i : i;
+            result.append(i <= 2 ? -i : i).append(" ");
         }
-        return result;
+        return result.toString();
     }
 
     /*
-    Найти сумму квадратов первых ста чисел.
+    Third Task. Найти сумму квадратов первых ста чисел.
     */
     public int thirdTask() {
         int result = 0;
@@ -46,7 +41,7 @@ public class Loop {
     }
 
     /*
-    Составить программу нахождения произведения
+    Fourth Task. Составить программу нахождения произведения
     квадратов первых двухсот чисел.
     */
     public double fourthTask() {
@@ -58,17 +53,14 @@ public class Loop {
     }
 
     /*
-    Даны числовой ряд и некоторое число е.
-    Найти умму тех членов ряда, модуль которых больше или равен заданному е.
+    Fifth Task. Даны числовой ряд и некоторое число е.
+    Найти сумму тех членов ряда, модуль которых больше или равен заданному е.
     Общий член ряда имеет вид:
     An = 1/2^n + 1/3^n
     */
-    public double fifthTask() {
-        Scanner scanner = new Scanner(System.in);
-        double e = scanner.nextDouble();
+    public double fifthTask(double e) {
         double result = 0;
         double a = 0;
-
         for (int i = 1;; i++) {
             a = 1/Math.pow(2, i) + 1/Math.pow(3, i);
             if(a >= e) {
@@ -81,7 +73,7 @@ public class Loop {
     }
 
     /*
-    Вывести на экран соответствий между символами и их
+    Sixth Task. Вывести на экран соответствий между символами и их
     численными обозначениями в памяти компьютера.
     */
     public String sixthTask() {
@@ -93,13 +85,10 @@ public class Loop {
     }
 
     /*
-    Для каждого натурального числа в промежутке от m до n вывести все делители,
+    Seventh Task. Для каждого натурального числа в промежутке от m до n вывести все делители,
     кроме единицы и самого числа. m и n вводятся с клавиатуры.
     */
-    public String seventhTask() {
-        Scanner scanner = new Scanner(System.in);
-        int m = scanner.nextInt();
-        int n = scanner.nextInt();
+    public String seventhTask(int m, int n) {
         StringBuilder result = new StringBuilder();
         for (int i = m; i <= n; i++) {
             result.append(i).append(": ");
@@ -114,7 +103,7 @@ public class Loop {
     }
 
     /*
-    Даны два числа. Определить цифры, входящие в запись как первого так и второго числа
+    Eighth Task. Даны два числа. Определить цифры, входящие в запись как первого так и второго числа
     */
     public int eighthTask() {
         int result = -1;
